@@ -1,0 +1,106 @@
+.container {
+  margin: 20px;
+}
+
+.formContainer {
+  width: 538px;
+  height: 343px;
+  margin-top: 147px;
+}
+
+.homeDescription {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 140%;
+  color: #212121;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.submitButton {
+  margin-top: 10em;
+  padding: 13px 49px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px 0 rgba(252, 132, 45, 0.5);
+  background: #fc842d;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #ffa667;
+}
+
+.modalButton {
+  margin-top: 2em;
+  padding: 13px 49px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px 0 rgba(252, 132, 45, 0.5);
+  background: #fc842d;
+  transition: background 0.3s ease;
+}
+
+.modalTitle {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 190%;
+  text-align: center;
+  color: #212121;
+  border-bottom: 2px solid #fc842d;
+  padding-bottom: 18px;
+}
+
+.calorieValue {
+  font-size: 2rem;
+  color: #333;
+}
+
+.modalDescription {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #212121;
+  width: -webkit-fill-available;
+}
+
+@media screen and (max-width: 768px) {
+  .formContainer {
+    margin-top: unset;
+  }
+
+  form {
+    justify-content: unset;
+  }
+
+  .submitButton {
+    position: absolute;
+    top: 27em;
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .formContainer {
+    width: unset;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submitButton {
+    position: unset;
+    width: fit-content;
+    margin-top: 2em;
+  }
+}

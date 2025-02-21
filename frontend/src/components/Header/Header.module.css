@@ -1,0 +1,142 @@
+.buttonContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logoImage {
+  width: 167px;
+  height: 66px;
+}
+
+.logoImage2 {
+  display: none;
+}
+
+.homeButtonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-left: 3px solid #e0e0e0;
+  padding: 0 0 0 10px;
+  margin-left: 10px;
+}
+
+.homeButtons {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9b9faa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.activeButton {
+  color: #000;
+}
+
+.leefFrame {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+}
+
+.leefFrameSmall {
+  display: none;
+}
+
+.banana {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+}
+
+.strawberry {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+
+.vector {
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  top: 0;
+  height: -webkit-fill-available;
+}
+
+@media screen and (max-width: 768px) {
+  .logoImage {
+    width: 100px;
+    height: 40px;
+  }
+
+  .homeButtonsContainer {
+    border: none;
+  }
+
+  .buttonContainer {
+    justify-content: space-between;
+    border-bottom: 3px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+
+  .leefFrame {
+    display: none;
+  }
+
+  .leefFrameSmall {
+    width: -webkit-fill-available;
+    height: 37em;
+    position: absolute;
+    object-fit: cover;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+  }
+
+  .banana {
+    bottom: 0;
+    top: unset;
+    width: 20em;
+  }
+
+  .strawberry {
+    bottom: 14em;
+    width: 12em;
+  }
+
+  .vector {
+    top: 20em;
+    height: -webkit-fill-available;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .leefFrame,
+  .leefFrameSmall,
+  .banana,
+  .strawberry,
+  .vector {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .logoImage {
+    display: none;
+  }
+
+  .logoImage2 {
+    display: block;
+    width: 40px;
+    height: 30px;
+  }
+}

@@ -17,10 +17,10 @@ const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 app.use(logger(formatsLogger));
 app.use(
   cors({
-    origin: process.env.ORIGIN_CORS_URL || "*", // Default to allow all origins if env variable is missing
+    origin: process.env.ORIGIN_CORS_URL || "*",
     credentials: true,
     optionSuccessStatus: 200,
-  }),
+  })
 );
 app.use(express.json());
 
@@ -28,7 +28,7 @@ app.use("/api/users", authRouter);
 app.use("/api/diary", diaryRouter);
 app.use("/api/categories", categoriesRouter);
 
-app.use(express.static("public")); // Serve static files AFTER defining routes
+app.use(express.static("public"));
 
 // Handle 404 - Not Found
 app.use((req, res) => {

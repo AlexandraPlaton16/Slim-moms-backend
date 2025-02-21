@@ -1,0 +1,138 @@
+.container {
+  margin: 20px;
+}
+
+.diaryPage {
+  margin-top: 147px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* gap: 50em; */
+  /* align-content: flex-start; */
+  /* flex-wrap: wrap; */
+  /* min-height: 100vh; */
+}
+
+.datePickerInput {
+  border: none;
+  font-weight: 700;
+  font-size: 34px;
+  color: #212121;
+}
+
+.addButton {
+  width: 48px;
+  height: 48px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px 0 rgba(252, 132, 45, 0.5);
+  background: #fc842d;
+  transition: background 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #ffa667;
+}
+
+.entriesList {
+  max-height: 15em;
+  height: 15em;
+  overflow-y: scroll;
+  scrollbar-color: #ffa667 transparent;
+  margin-top: 2em;
+}
+
+.diaryFoodList {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.diaryFoods {
+  line-height: 3em;
+  border-bottom: 3px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  margin-right: 20px;
+}
+
+.deleteButton {
+  background: transparent;
+  border: none;
+  color: #9b9faa;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.vector {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45em;
+  height: 100vh;
+  background-color: #f0f0f0;
+  z-index: -2;
+}
+
+.rightSection {
+  width: 37em;
+}
+
+.summaryForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  width: 30em;
+}
+
+.summaryInput {
+  text-align: right;
+  border: none;
+  background: none;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-align: right;
+  color: #9b9faa;
+}
+
+@media screen and (max-width: 1320px) {
+  .diaryPage {
+    flex-direction: column;
+  }
+
+  .vector {
+    top: 45em;
+    bottom: 0;
+    width: 100%;
+    /* height: 26em; */
+  }
+
+  .summary {
+    margin-right: unset;
+    margin-top: 10em;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .summaryItem {
+    width: 18em;
+  }
+
+  .rightSection {
+    display: contents;
+  }
+}

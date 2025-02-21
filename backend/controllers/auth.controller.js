@@ -60,6 +60,7 @@ const logout = async (req, res) => {
 const getCurrent = async (req, res) => {
   const user = req.user;
   res.json({
+    _id: user._id,
     name: user.name,
     email: user.email,
     token: user.token,
@@ -77,7 +78,7 @@ const updateUserInfo = async (req, res) => {
       6.25 * userInfo.height -
       5 * userInfo.age -
       161 -
-      10 * (userInfo.currentWeight - userInfo.desiredWeight),
+      10 * (userInfo.currentWeight - userInfo.desiredWeight)
   );
 
   const user = await User.findByIdAndUpdate(
@@ -85,7 +86,7 @@ const updateUserInfo = async (req, res) => {
     {
       $set: { userInfo, dailyCaloriesRate: calcCalories, forbiddenCategories },
     },
-    { new: true },
+    { new: true }
   );
 
   if (!user) {

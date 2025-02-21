@@ -6,26 +6,25 @@ const {
   getCurrent,
   updateUserInfo,
 } = require("../../controllers/auth.controller");
-
 const { ctrlWrapper } = require("../../helpers");
 const { validation, authenticate } = require("../../middlewares");
 const { schemas } = require("../../models/user");
 
 const router = express.Router();
 
-// User registration
+// Ruta pentru înregistrare
 router.post("/register", validation(schemas.register), ctrlWrapper(register));
 
-// User login
+// Ruta pentru login
 router.post("/login", validation(schemas.login), ctrlWrapper(login));
 
-// Get current user details
+// Obține detalii despre utilizatorul curent
 router.get("/current", authenticate, ctrlWrapper(getCurrent));
 
-// User logout (should be a POST request)
+// Logout utilizator
 router.post("/logout", authenticate, ctrlWrapper(logout));
 
-// Update user information
+// Actualizează informațiile utilizatorului
 router.patch("/updateUserInfo", authenticate, ctrlWrapper(updateUserInfo));
 
 module.exports = router;

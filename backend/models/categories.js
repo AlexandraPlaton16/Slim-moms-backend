@@ -18,6 +18,10 @@ const categorySchema = new mongoose.Schema({
       type: String,
       required: true,
     },
+    en: {
+      type: String,
+      required: true,
+    },
   },
   calories: {
     type: Number,

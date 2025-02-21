@@ -1,0 +1,154 @@
+.buttonContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logoImage {
+  width: 167px;
+  height: 66px;
+}
+
+.logoImage2 {
+  display: none;
+}
+
+.calcBtnContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.homeButtonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-left: 3px solid #e0e0e0;
+  padding: 0 0 0 10px;
+  margin-left: 10px;
+}
+
+.homeButtons {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9b9faa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.headerRight {
+  display: flex;
+  gap: 20px;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-align: right;
+  color: #212121;
+}
+
+.exitButton {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+  border: none;
+  padding-left: 20px;
+  border-left: 3px solid #e0e0e0;
+  background: none;
+  cursor: pointer;
+}
+
+.activeButton {
+  color: #000;
+}
+
+.leefFrame {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+}
+
+.loginLeefSmall {
+  display: none;
+}
+
+@media screen and (max-width: 1320px) {
+  .leefFrame {
+    display: none;
+  }
+
+  .loginLeefSmall {
+    display: block;
+    width: 50%;
+    position: absolute;
+    object-fit: cover;
+    bottom: 0;
+    z-index: -1;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logoImage {
+    width: 100px;
+    height: 40px;
+  }
+
+  .homeButtonsContainer {
+    border: none;
+  }
+
+  .buttonContainer {
+    justify-content: space-between;
+    border-bottom: 3px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+
+  .leefFrame {
+    display: none;
+  }
+
+  .leefFrameSmall {
+    width: -webkit-fill-available;
+    height: 37em;
+    position: absolute;
+    object-fit: cover;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+  }
+
+  .vector {
+    top: 20em;
+    height: -webkit-fill-available;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .leefFrame,
+  .leefFrameSmall,
+  .vector {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .logoImage {
+    display: none;
+  }
+
+  .logoImage2 {
+    display: block;
+    width: 40px;
+    height: 30px;
+  }
+}

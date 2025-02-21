@@ -1,6 +1,6 @@
 const { Category } = require("../models/categories");
 const { createError, ctrlWrapper } = require("../helpers");
-const { ObjectId } = require("mongoose").Types; // Importăm ObjectId
+const { ObjectId } = require("mongoose").Types;
 
 const findOne = async (req, res) => {
   const { id } = req.params;
@@ -12,7 +12,7 @@ const findOne = async (req, res) => {
     return res.status(400).json({ message: "Invalid ObjectId format" });
   }
 
-  const result = await Category.findById(id); // Folosim direct findById
+  const result = await Category.findById(id);
 
   if (!result) {
     console.log(`⚠️ Categoria cu ID-ul ${id} nu a fost găsită!`);

@@ -14,14 +14,8 @@ const diarySchema = new Schema(
           required: true,
         },
         title: {
-          ru: {
-            type: String,
-            required: true,
-          },
-          ua: {
-            type: String,
-            required: true,
-          },
+          type: String,
+          required: true,
         },
         calories: {
           type: Number,
@@ -39,7 +33,7 @@ const diarySchema = new Schema(
       required: true,
     },
   },
-  { versionKey: false, timestamps: true },
+  { versionKey: false, timestamps: true }
 );
 
 const add = Joi.object({
@@ -47,12 +41,9 @@ const add = Joi.object({
   productList: Joi.array().items(
     Joi.object({
       weight: Joi.number().required(),
-      title: Joi.object({
-        ru: Joi.string().required(),
-        ua: Joi.string().required(),
-      }),
+      title: Joi.string().required(),
       calories: Joi.number().required(),
-    }),
+    })
   ),
   caloriesReceived: Joi.number().default(0),
 });
@@ -61,7 +52,7 @@ const schemas = {
   add,
 };
 
-const Diary = model("diary", diarySchema); // Corectat numele modelului
+const Diary = model("diary", diarySchema);
 
 module.exports = {
   Diary,
